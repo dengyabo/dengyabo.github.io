@@ -1,0 +1,17 @@
+*{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;/* 去除a标签下划线 */
+}
+.header a{
+	color: #808080;
+}
+a:hover{
+	color: red;
+}
+.daohang a{
+	color: #ffffff;
+}
+ul,li,ol{
+            	list-style: none;/* 清除默认标签 */
+            }
