@@ -1,0 +1,53 @@
+body { background:#f1f1f1; font-family:Microsoft YaHei;}
+a:hover{ text-decoration:none;}
+.big_top {
+	height: auto;
+	width: 100%; border-top:solid 3px #6E1B45;
+}
+.big_top .header {
+	width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+	height: 120px;
+}
+.big_top .header .logo{ height:96px; width:570px; float:left; padding-top:24px;}
+.big_top .header .header_right{ width:430px; height:110px; float:right; padding-top:10px;}
+.big_top .header .header_right .login_xinxi{ width:430px; height:24px; line-height:24px; text-align:right; margin-top:10px;}
+.big_top .header .header_right .login_xinxi a{ margin-left:15px;}
+.big_top .header .header_right .SC_wrap{ width:430px; height:24px; line-height:24px; text-align:right;}
+.big_top .header .header_right .SC_wrap a{ margin-left:15px;}
+.big_top .header .search_wrap {width:253px; margin:15px 0 0 177px; _width:265px; _margin:15px 0 0 165px;}
+.big_top .header .search_wrap span{float:left; display:block; height:28px; line-height:23px; margin-right:5px; color:#333; font-family:'Microsoft YaHei'; font-weight:600; width:auto;}
+.big_top .header .search_wrap .leibie{ float:left; margin:2px 7px 0 0;}
+.big_top .header .search_wrap .search_k {background-image: url(../images/201007202204062051.jpg); float: left; height: 23px; width: 159px;}
+.big_top .nav{ width:100%; background:#E23A75; height:32px;}
+.big_top .nav .menu{ width:1000px; margin:0 auto;}
+.menu li{font-size:14px; float:left; height:32px; width:111px; display:inline; }
+.menu li a{color:#fff; line-height:32px; width:89px; display:block; padding-left:22px;}
+.big_middle {
+	height: auto;
+	width: 100%;
+	margin-top: 5px;
+}
+
+
+.big_bottom {
+	height: auto;
+	width: 100%;
+	margin-top: 5px; background:#6E1B45;
+}
+.big_bottom .footer {
+	height: 167px;
+	width: 975px;
+	margin-right: auto;
+	margin-left: auto; padding: 32px 0 16px 25px;
+}
+.big_bottom .footer .about_wrap{}
+.big_bottom .footer .about_wrap dl{border-right: 1px solid #9b2661; float: left; height: 155px; line-height: 22px; padding: 8px 16px 0 0; text-align: right; width: 156px;}
+.big_bottom .footer .about_wrap dt{color: #ffffff; font-weight: bold;padding-bottom: 12px;}
+.big_bottom .footer .about_wrap dd{ height:24px; line-height:24px;}
+.big_bottom .footer .about_wrap dd a{ color:#ddd;}
+.big_bottom .footer .copyright{float: left; height: 183px; padding: 0 16px 0 100px; width: 280px; color:#FFF;}
+.big_bottom .footer .copyright .top{ line-height:24px; font-weight:bold; letter-spacing:1px;}
+.big_bottom .footer .copyright .top a{color:#fff;}
+.big_bottom .footer .copyright .bottom{ padding-top:45px; font-family:Verdana, Geneva, sans-serif; font-size:10px;}

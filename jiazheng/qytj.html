@@ -1,0 +1,303 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>潮州家政网</title>
+<link href="css/base.css" rel="stylesheet" type="text/css"/>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/global.css" rel="stylesheet" type="text/css" />
+<link href="css/enroll.css" rel="stylesheet" type="text/css" />
+<link href="css/list.css" rel="stylesheet" type="text/css" />
+<link href="css/smartmenu.css" type="text/css" rel="stylesheet" />
+<link type="text/css" rel="stylesheet" href="css/shCore.css"/>
+<link type="text/css" rel="stylesheet" href="css/shThemeDefault.css"/>
+<script src="http://www.5imoban.net/download/jquery/jquery-1.8.3.min.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/banner.js"></script>
+<script>
+	$(".zx_text").each(function(i){
+    var divH = $(this).height();
+    var $p = $("p", $(this)).eq(0);
+    while ($p.outerHeight() > divH) {
+        $p.text($p.text().replace(/(\s)*([a-zA-Z0-9]+|\W)(\.\.\.)?$/, "..."));
+    };
+});
+</script>
+<script type="text/javascript">
+function setTab(name,cursel,n){
+for(i=1;i<=n;i++){
+var menu=document.getElementById(name+i);
+var con=document.getElementById("con_"+name+"_"+i);
+menu.className=i==cursel?"hover1":"";
+con.style.display=i==cursel?"block":"none";
+}
+}
+</script>
+<script type="text/javascript" src="js/smartmenu-min.js"></script>
+<script type="text/javascript" src="js/shCore.js"></script>
+<script type="text/javascript" src="js/shBrushJScript.js"></script>
+<script type="text/javascript" src="js/shBrushXml.js"></script>
+<script type="text/javascript">
+            jQuery(window).ready(function(){
+                jQuery("#navigation").Smartmenu({animationDuration: 350});
+            });
+            SyntaxHighlighter.all();
+	    </script>
+</head>
+
+<body>
+<div class="big_top">
+	<div class="header">
+    	<div class="logo"><h1><a href="http://www.5imoban.net" target="_blank" title="网页模板"><img src="images/201104072301592656.jpg" alt="静态网页模板"></a></h1></div>
+      <div class="header_right">
+        	<div class="SC_wrap">设为首页 丨 加入收藏</div>
+            <div class="search_wrap">
+            	<span>快速搜索：</span>
+                	<select class="leibie">
+                	  <option selected="selected">类别</option>
+                	  <option>家政服务</option>
+                	  <option>保洁服务</option>
+                	  <option>维修服务</option>
+                	  <option>搬家服务</option>
+                	  <option>跑腿服务</option>
+                	</select> 
+                 <li class="search_k">
+                         &nbsp;&nbsp;&nbsp;&nbsp;<input name="keyword"  type="text" id="keyword"  value="请输入关键词" onfocus="this.value=''" style="border:none; background:none; width:100px; color:#CCCCCC; margin-top:2px;"/>
+                  </li>
+                  <li style="height:23px; list-style-type:none; margin:0px; padding:0px; float:left; width:27px;">
+                        <input type="image" src="images/20100720220406205.jpg" style="margin:0px; padding:0px;"/>
+                  </li>
+            </div>
+        </div>
+    </div>
+    <div class="nav" id="navigation">
+    	<ul class="menu">
+        	<li><a href="index.html">网站首页</a></li>
+            <li>
+            	<a href="list.html" class="tablink">家政服务</a>
+                <ul>
+                	<li><a href="#">居家养老&#12288&#12288</a></li>
+                    <li><a href="#">护理</a></li>
+                    <li><a href="#">家教</a></li>
+                    <li><a href="#">育婴师</a></li>
+                    <li><a href="#">月嫂</a></li>
+                    <li><a href="#">钟点工</a></li>
+                    <li><a href="#">保姆</a></li>
+                </ul>
+            </li>
+            <li><a href="list.html">宝洁服务</a>
+            	<ul>
+                	<li><a href="#">家庭保洁&#12288&#12288</a></li>
+                    <li><a href="#">企业保洁</a></li>
+                    <li><a href="#">防水补漏</a></li>
+                    <li><a href="#">外墙清洗</a></li>
+                </ul>
+            </li>
+            <li><a href="list.html">维修服务</a>
+            	<ul>
+                	<li><a href="#">家电维修&#12288&#12288</a></li>
+                    <li><a href="#">管道维修</a></li>
+                </ul>
+            </li>
+            <li><a href="list.html">搬家服务</a>
+            	<ul>
+                	<li><a href="#">公司乔迁&#12288&#12288</a></li>
+                    <li><a href="#">居家搬家</a></li>
+                    <li><a href="#">设备搬迁</a></li>
+                    <li><a href="#">长途搬运</a></li>
+                </ul>
+            </li>
+            <li><a href="list.html">跑腿服务</a>
+            	<ul>
+                	<li><a href="#">桶装水&#12288&#12288</a></li>
+                    <li><a href="#">煤气罐</a></li>
+                    <li><a href="#">米</a></li>
+                    <li><a href="#">蛋糕</a></li>
+                    <li><a href="#">送花</a></li>
+                    <li><a href="#">百货</a></li>
+                </ul>
+            </li>
+            <li><a href="list.html">企业推荐</a></li>
+            <li><a href="login.html">我要登记</a>
+            	<ul>
+                	<li><a href="information.html">我的需求&#12288&#12288</a></li>
+                    <li><a href="enroll.html">我要求职</a></li>
+                </ul>
+            </li>
+            <li><a href="list.html">培训就业</a>
+            	<ul>
+                	<li><a href="#">培训资讯&#12288&#12288</a></li>
+                    <li><a href="#">培训班</a></li>
+                    <li><a href="#">培训机构</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="big_middle">
+	<div class="nei_banner">
+    	<object width="1000" height="250" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000">
+                <param value="images/focus.swf" name="movie" />
+                <param value="high" name="quality" />
+                <param value="false" name="menu" />
+                <param value="opaque" name="wmode" />
+                <param value="bcastr_file=images/bannernei.jpg|images/bannernei.jpg&bcastr_link=|||&bcastr_title=" name="FlashVars" />
+                <embed width="1000" height="250" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" quality="high" false="" flashvars="bcastr_file=images/bannernei.jpg|images/bannernei.jpg&bcastr_link=|||&bcastr_title=& menu=" wmode="opaque" src="images/focus.swf"> </embed>
+    	</object>
+    </div>
+    <div class="content_wrap">
+    	<div class="content_tit"><a href="index.html">首页</a> >> <a href="#">企业推荐</a></div>
+    	<div class="left_wrap">
+        	<div class="left_list_wrap">
+                <div class="left_list_tit"><h3>服务导航</h3></div>
+                <div class="left_list">
+                    <dl>
+                        <dt>家政服务</dt>
+                        <dd>
+                            <a>居家养老</a>
+                            <a>护理</a>
+                            <a>家教</a>
+                            <a>育婴师</a>
+                            <a>月嫂</a>
+                            <a>钟点工</a>
+                            <a>保姆</a>
+                        </dd>
+                        <dt>保洁服务</dt>
+                        <dd>
+                            <a>家庭保洁</a>
+                            <a>企业保洁</a>
+                            <a>防水补漏</a>
+                            <a>外墙清洗</a>
+                        </dd>
+                        <dt>维修服务</dt>
+                        <dd>
+                            <a>家电维修</a>
+                            <a>管道维修</a>
+                        </dd>
+                        <dt>搬家服务</dt>
+                        <dd>
+                            <a>公司乔迁</a>
+                            <a>居家搬家</a>
+                            <a>设备搬迁</a>
+                            <a>长度搬运</a>
+                        </dd>
+                        <dt>跑腿服务</dt>
+                        <dd>
+                            <a>桶装水</a>
+                            <a>煤气罐</a>
+                            <a>米</a>
+                            <a>蛋糕</a>
+                            <a>送花</a>
+                            <a>百货</a>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            
+          <div class="pxjy_wrap">
+            	<div class="pxjy_tit"><h3>培训就业</h3></div>
+                <div class="pxjy">
+                	<ul>
+                    	<li>家政服务员免费岗前培训报名</li>
+                        <li>家政服务员免费岗前培训报名</li>
+                        <li>家政服务员免费岗前培训报名</li>
+                        <li>家政服务员免费岗前培训报名</li>
+                        <li>家政服务员免费岗前培训报名</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="right_wrap">
+        	<div class="right_content">
+            	<div class="qytj_about">
+                	<div class="qytj_text">
+                    	<div class="text_tit">
+                        	<h3>潮州市湘桥区天川家政服务部</h3>
+                        </div>
+                        <p>
+                            &#12288;天川家庭服务中心是一家以员工制为主的家庭服务机构，中心拥有科学的管理制度和专业的培训力量，采用个性化的经营模式，聚集了一大批有学历、有爱心、有社会责任感、有经验的高素质员工，立志服务于家庭，赢造幸福家庭。是潮州各界成功人士家庭服务的首选品牌。</br>
+企业使命: 赢造幸福家庭</br>
+企业精神：感恩幸福潮州 和谐万家灯火</br>
+管理理念：海不辞水，故能成其深；山不辞土，故能成其高！</br>
+我们的经营理念：幸福全家、和谐社会</br>
+核心价值观：自强不息、厚德载物	
+                        </p>
+                    </div>
+                    <div class="qytj_img">
+                    	<div class="qytj_img_wrap"><img src="images/qy.gif"></div>
+					</div>
+                </div>
+                <div class="qytj_content">
+                	<div class="qytj_info_tit">
+            	<h3 id="two1" class="hover1" onclick="window.open('');" onmouseover="setTab('two',1,2)">公司简介</h3>
+                <h3 id="two2" class="" onclick="window.open('');" onmouseover="setTab('two',2,2)">服务项目</h3>
+            		</div>
+                    <div class="qytj_info" id="con_two_1" >
+                        <ul class="GrayLink">
+                            <li>公司名称：潮州市天川家政服务部</li>
+                            <li> 公司规模：20-99人</li>
+                            <li>公司行业：家政</li>
+                            <li>公司类型：民营</li>
+                            <li>联系人：丁先生</li>
+                            <li>联系电话：0768-2356500</li>
+                            <li>公司地址：吉怡路星河菀对面</li>
+                            <li>公司网站：http://www.0768qq.net</li>
+                        </ul>
+                    </div>
+                    <div id="con_two_2" style="display: none;">
+                        <ul class="GrayLink">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div style="clear:both;"></div>
+<div class="big_bottom">
+	<div class="footer">
+    	<div class="about_wrap">
+        	<dl>
+            	<dt>收藏</dt>
+                <dd><a href="#">设为首页</a></dd>
+                <dd><a href="#">加入收藏</a></dd>
+            </dl>
+            <dl>
+            	<dt>培训就业</dt>
+                <dd><a href="#">培训资讯</a></dd>
+                <dd><a href="#">培训班</a></dd>
+                <dd><a href="#">培训机构</a></dd>
+            </dl>
+            <dl>
+            	<dt>用户反馈</dt>
+                <dd><a href="#">投诉反馈</a></dd>
+                <dd><a href="#">提供建议</a></dd>
+                <dd><a href="contact.html">联系我们</a></dd>
+            </dl>
+        </div>
+        <div class="copyright">
+        	<p class="top">版权所有:潮州市家政网 </br>
+            技术支持:潮州市盈龙信息科技有限公司</p>
+            <p class="bottom">
+            	Copyright&copy;2006-2012 5imoban.net All Rights Reserved. Powered by DedeCMS V57_GBK
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+.right_wrap .right_content .right_list_tit{ width:772px; height:30px; border-bottom:2px solid #6E1B45; line-height:30px; float:left;}
+.right_wrap .right_content .list_content_tit{ width:772px; height:auto; border-bottom: solid 1px #CCCCCC;}
+.right_wrap .right_content .list_content_tit h2{ font-size:18px; color:#333; font-weight:bold; text-align:center; line-height:30px;}
+.right_wrap .right_content .list_content_tit p{ text-align:12px; text-align:center; color:#bbb;}
+.right_wrap .right_content .list_content_tit p span{ padding-left:20px;}
+.right_wrap .right_content .list_content{ width:772px; height:auto; line-height:28px; color:#333; min-height:513px; _height:518px; overflow: visible;}
+.right_wrap .right_content .contact{ width:772px; height:auto; line-height:30px; color:#333; float:left;}
+.right_wrap .right_content .contact .yufk{ width:772px; border:1px dotted #CCC; margin-top:10px;}
+.right_wrap .right_content .contact .yufk td{ border: 1px dotted #CCC; padding:2px 0 2px 10px;}
+.right_wrap .right_content .contact .yufk td .textarea{ width:600px; height:100px;}
+.right_wrap .right_content .contact .yufk td .input{ width:300px;}
+.right_wrap .right_content .contact .yufk td.buttom_wrap{ text-align:center;}
+.right_wrap .right_content .contact .yufk td.buttom_wrap .buttom{ width:73px; height:27px; background:url(../images/btn1.png); border:none; margin-right:10px; line-height:27px; font-family:Microsoft YaHei; color:#333;}
+
+
+
+
+.right_wrap .right_content .right_list_tit h3{font-size:14px; color:#E23A75; font-weight:700;}
+.right_wrap .right_content .right_list{ float:left; width:772px; height:auto;}
+.right_wrap .right_content .right_list li{ width:762px; height:30px; border-bottom: dotted 1px #CCCCCC; background:url(../images/list.gif) no-repeat center left; padding-left:10px; float:left;}
+.right_wrap .right_content .right_list li a{ float:left; line-height:30px; color:#333; font-size:14px;}
+.right_wrap .right_content .right_list li span{ float:right; line-height:30px;}
+.right_wrap .right_content .qjz_list{ width:772px; border:1px dotted #CCC; margin-top:10px;}
+.right_wrap .right_content .qjz_list td,th{ line-height:28px; border:dotted 1px #CCCCCC; text-align:center;}
+.right_wrap .right_content .qjz_list td .jianli{ color:#333;}
+.list_footer {float: left; height: 30px;width: 772px;}
+.list_footer .consult_page {text-align:center; height: 20px; line-height: 20px; margin:5px 14px 5px 0;}
+.list_footer .consult_page .on {background: url(../images/bg_pro_list_btn02.gif) no-repeat -21px 0; color: #FFF; text-align: center;}
+.list_footer .consult_page a {text-transform: none; color: #333; width: 21px; display: inline-block;text-align: center; background: url(../images/bg_pro_list_btn02.gif) no-repeat; margin:0 3px;}
+.list_footer .consult_page input {margin: 0px; width: 34px; text-align: center;}
+.list_footer .consult_page .up {width: 36px; background: url(../images/bg_pro_list_btn02.gif) no-repeat -42px 0px;line-height: 24px; height: 24px; padding: 0 4px 0 10px;}
+.list_footer .consult_page .next {width: 36px; background: url(../images/bg_pro_list_btn02.gif) no-repeat -192px 0px;line-height: 24px; height: 24px; padding: 0 10px 0 4px;}
+.list_footer .consult_page .goto_page {
+background: url(../images/bg_pro_list_btn02.gif) no-repeat -242px 0px; width: 30px;}
+
+
+.right_wrap .right_content .right_list .xq_table,.login_table{ border:1px dotted #CCCCCC; margin-top:10px;}
+.right_wrap .right_content .qytj_about{ width:778px; height:auto; float:left;}
+.right_wrap .right_content .qytj_text{ float:left; width:450px; height:auto; }
+.right_wrap .right_content .qytj_text .text_tit{ height:30px; line-height:30px; width:430px; background:url(../images/noVIP.gif) no-repeat center left; padding-left:20px; border-bottom: solid 2px #6E1B45;}
+.right_wrap .right_content .qytj_text .text_tit h3{ font-size:14px;; font-weight:bold; color:#E23A75;}
+.right_wrap .right_content p{ line-height:26px; color:#333; padding:8px;}
+.right_wrap .right_content .qytj_img{ float:right; width:310px; border:solid 1px #CCCCCC; padding:5px; text-align:center; height:276px;}
+.right_wrap .right_content .qytj_img .qytj_img_wrap{ display:table-cell; font-size:144px; height:276px; width:310px; text-align:center; vertical-align:middle;}
+.right_wrap .right_content .qytj_img img{ vertical-align:middle;}
+.right_wrap .right_content .qytj_content{ float:left; widows:778px; height:auto;}
+.right_wrap .right_content .qytj_content .qytj_info_tit{ width:778px; height:30px; float:left; border-bottom: 2px solid #6E1B45; line-height:30px;}
+.qytj_info_tit h3{float: left; padding: 0 20px; font-size:14px; font-weight:bold;}
+.qytj_info{ width:768px; float:left; padding:5px;}
+.qytj_info ul li{ float:left; width:384px; height:32px; line-height:32px; font-size:14px; color:#333;}
+.right_list .xq_table td,.login_table td{ height:30px; line-height:30px; border:1px dotted #CCCCCC; padding-left:10px;}
+.right_list .login_table .table_bottom{ border-bottom: dotted 1px #CCCCCC; border-left:none; border-top:none; border-right:none;}
+.right_list .login_table .table_text{ font-size:12px; color:#aaa;}
+.right_list .login_table select{ width:100px; height:22px;}
+.right_list .login_table input{ width:150px;}
+.right_list .login_table .zhuce_buttom{ width:100px; height:27px; border:none; background:url(../images/btn.png)}
+.right_list .login_table .mima_buttom{ width:60px;}
+.right_list .xq_table .xq_tit{ background:#f4f4f4;}
+.right_list .xq_table .xq_tit h2{ font-size:14px; color:#333; padding-left:15px; line-height:30px; font-weight:bold;}

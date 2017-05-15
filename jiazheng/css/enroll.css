@@ -1,0 +1,38 @@
+.nei_banner{ width:1000px; height:250px; margin:0 auto; margin-top:8px;}
+.content_wrap .content_tit{ width:990px; height:auto; height:30px; background:#FFF; border:solid 1px #CCCCCC; padding-left:8px;}
+.content_wrap .content_tit a{ color:#333; font-size:14px; line-height:30px;}
+.left_wrap .left_list_wrap{ margin-top:0px;}
+.content_wrap .right_wrap{ width:790px; float:left; margin-left:10px; height:auto; margin-top:8px; display:inline;}
+.content_wrap .right_wrap .right_content{ width:772px; height:auto; background:#FFF; border: solid 1px #CCCCCC; padding:5px 8px; float:left; min-height:580px; _height:585px; overflow: visible;}
+.right_content .yonghu_top{ width:770px; height:30px; border:solid 1px #CCCCCC; background:url(../images/yonghu_top_bg.jpg) repeat-x;}
+.right_content .yonghu_top ul{ width:770px; height:30px; line-height:30px;}
+.right_content .yonghu_top li{ float:left; width:70px; height:30px; background:url(../images/li_bg.jpg) no-repeat center right; padding-left:15px;}
+.right_content .yonghu_top li a{ display:block; float:left; width:50px; padding-left:30px; color:#333;}
+.right_content .yonghu_top li .jia{ background:url(../images/3.png) no-repeat center left;}
+.right_content .yonghu_top li .bian{ background:url(../images/23.png) no-repeat center left;}
+.right_content .yonghu_top li .shan{ background:url(../images/15.png) no-repeat center left;}
+.content_wrap .right_wrap .right_content .yonghu_table{text-align:center; margin-top:10px;}
+.right_content .yonghu_table td{ border:1px dotted #ccc;}
+.right_content .yonghu_table .table_top{ background:#fae9ef; color:#333;}
+.right_content .zhuce_tit{ width:772px; height:35px;}
+.right_content .zhuce_tit h2{ color:#333; font-size:16px; text-align:center; line-height:35px; font-weight:bold;}
+.right_content .zhuce_content{ width:772px; height:auto;}
+.right_content .zhuce_content table{ border:1px #CCCCCC dotted;}
+.right_content .zhuce_content td{ height:30px; line-height:30px; padding-left:10px; border:1px #CCCCCC dotted;}
+.right_content .zhuce_content td .text1{ width:150px;}
+.right_content .zhuce_content td .text2{ width:600px;}
+.right_content .zhuce_content td select{ width:80px;}
+.right_content .zhuce_content td .select{ width:60px; margin-right:5px;}
+.right_content .zhuce_content td .list_wrap{ width:668px; height:auto}
+.right_content .zhuce_content td .list_wrap li{ width:167px; float:left; height:30px; line-height:30px; padding:0px; border:0; background:none;}
+.right_content .zhuce_content td .list_wrap li input{ margin-right:5px;}
+.right_content .zhuce_content td.textarea_wrap{ padding:5px 0 5px 10px; width:663px;}
+.right_content .zhuce_content td.textarea_wrap textarea{ width:653px; height:80px;}
+.right_content .zhuce_content td.buttom_wrap{ text-align:center;}
+.right_content .zhuce_content td.buttom_wrap input{ margin-right:15px; width:60px; text-align:center;}
+
+.left_wrap .pxjy_wrap{ width:188px; height:auto; background:#FFF; border:1px solid #ccc; float:left; margin-top:8px; padding:5px;}
+.left_wrap .pxjy_wrap .pxjy_tit{ width:188px; height:30px; border-bottom:2px solid #6E1B45; line-height:30px; float:left;}
+.left_wrap .pxjy_wrap .pxjy_tit h3{font-size:14px; color:#E23A75; font-weight:700;}
+.left_wrap .pxjy_wrap .pxjy{ width:188px; height:auto; float:left;}
+.left_wrap .pxjy_wrap .pxjy li{ width:178px; height:30px; line-height:30px; border-bottom:1px dotted #ccc; background:url(../images/list.gif) no-repeat center left; padding-left:10px;}

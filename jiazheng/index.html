@@ -1,0 +1,581 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>潮州家政网</title>
+<link href="css/base.css" rel="stylesheet" type="text/css"/>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/global.css" rel="stylesheet" type="text/css" />
+<link href="css/smartmenu.css" type="text/css" rel="stylesheet" />
+<link type="text/css" rel="stylesheet" href="css/shCore.css"/>
+<link type="text/css" rel="stylesheet" href="css/shThemeDefault.css"/>
+<script src="http://www.5imoban.net/download/jquery/jquery-1.8.3.min.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/banner.js"></script>
+<script>
+$(".zx_text").each(function(i){
+    var divH = $(this).height();
+    var $p = $("p", $(this)).eq(0);
+    while ($p.outerHeight() > divH) {
+        $p.text($p.text().replace(/(\s)*([a-zA-Z0-9]+|\W)(\.\.\.)?$/, "..."));
+    };
+});
+</script>
+<script type="text/javascript">
+function setTab(name,cursel,n){
+for(i=1;i<=n;i++){
+var menu=document.getElementById(name+i);
+var con=document.getElementById("con_"+name+"_"+i);
+menu.className=i==cursel?"hover1":"";
+con.style.display=i==cursel?"block":"none";
+}
+}
+</script>
+<script type="text/javascript" src="js/smartmenu-min.js"></script>
+<script type="text/javascript" src="js/shCore.js"></script>
+<script type="text/javascript" src="js/shBrushJScript.js"></script>
+<script type="text/javascript" src="js/shBrushXml.js"></script>
+<script type="text/javascript">
+            jQuery(window).ready(function(){
+                jQuery("#navigation").Smartmenu({animationDuration: 350});
+            });
+            SyntaxHighlighter.all();
+	    </script>
+<script type="text/javascript">
+$(function() {
+	var sWidth = $("#focus").width(); //获取焦点图的宽度（显示面积）
+	var len = $("#focus ul li").length; //获取焦点图个数
+	var index = 0;
+	var picTimer;
+	
+	//以下代码添加数字按钮和按钮后的半透明条，还有上一页、下一页两个按钮
+	var btn = "<div class='btnBg'></div><div class='btn'>";
+	for(var i=0; i < len; i++) {
+		btn += "<span></span>";
+	}
+	btn += "</div><div class='preNext pre'></div><div class='preNext next'></div>";
+	$("#focus").append(btn);
+	$("#focus .btnBg").css("opacity",0.5);
+
+	//为小按钮添加鼠标滑入事件，以显示相应的内容
+	$("#focus .btn span").css("opacity",0.4).mouseenter(function() {
+		index = $("#focus .btn span").index(this);
+		showPics(index);
+	}).eq(0).trigger("mouseenter");
+
+	//上一页、下一页按钮透明度处理
+	$("#focus .preNext").css("opacity",0.2).hover(function() {
+		$(this).stop(true,false).animate({"opacity":"0.5"},300);
+	},function() {
+		$(this).stop(true,false).animate({"opacity":"0.2"},300);
+	});
+
+	//上一页按钮
+	$("#focus .pre").click(function() {
+		index -= 1;
+		if(index == -1) {index = len - 1;}
+		showPics(index);
+	});
+
+	//下一页按钮
+	$("#focus .next").click(function() {
+		index += 1;
+		if(index == len) {index = 0;}
+		showPics(index);
+	});
+
+	//本例为左右滚动，即所有li元素都是在同一排向左浮动，所以这里需要计算出外围ul元素的宽度
+	$("#focus ul").css("width",sWidth * (len));
+	
+	//鼠标滑上焦点图时停止自动播放，滑出时开始自动播放
+	$("#focus").hover(function() {
+		clearInterval(picTimer);
+	},function() {
+		picTimer = setInterval(function() {
+			showPics(index);
+			index++;
+			if(index == len) {index = 0;}
+		},4000); //此4000代表自动播放的间隔，单位：毫秒
+	}).trigger("mouseleave");
+	
+	//显示图片函数，根据接收的index值显示相应的内容
+	function showPics(index) { //普通切换
+		var nowLeft = -index*sWidth; //根据index值计算ul元素的left值
+		$("#focus ul").stop(true,false).animate({"left":nowLeft},300); //通过animate()调整ul元素滚动到计算出的position
+		//$("#focus .btn span").removeClass("on").eq(index).addClass("on"); //为当前的按钮切换到选中的效果
+		$("#focus .btn span").stop(true,false).animate({"opacity":"0.4"},300).eq(index).stop(true,false).animate({"opacity":"1"},300); //为当前的按钮切换到选中的效果
+	}
+});
+
+</script>        
+</head>
+
+<body>
+<div class="big_top">
+	<div class="header">
+    	<div class="logo"><h1><a href="http://www.5imoban.net" target="_blank" title="网页模板"><img src="images/201104072301592656.jpg" alt="静态网页模板"></a></h1></div>
+      <div class="header_right">
+        	<div class="SC_wrap"><a href="#">设为首页</a><a href="#">加入收藏</a></div>
+            <div class="login_xinxi"><a href="#">哈哈哈</a>!<a href="login_index.html" target="_blank">[登陆]</a><a href="#" href="login.html" target="_blank">[免费注册]</a></div>
+        <div class="search_wrap">
+            	<span>快速搜索：</span>
+                	<select class="leibie">
+                	  <option selected="selected">类别</option>
+                	  <option>家政服务</option>
+                	  <option>保洁服务</option>
+                	  <option>维修服务</option>
+                	  <option>搬家服务</option>
+                	  <option>跑腿服务</option>
+                	</select> 
+                    <select class="leibie">
+                	  <option selected="selected">期望待遇</option>
+                	  <option>1000~1500</option>
+                	  <option>1500~2000</option>
+                	  <option>2000~2500</option>
+                	  <option>2500~3000</option>
+                	  <option>3000~3500</option>
+                	</select>
+                <input type="button" value="搜索"  class="button1"/>
+          </div>
+        </div>
+    </div>
+    <div class="nav" id="navigation">
+    	<ul class="menu">
+        	<li><a href="#">网站首页</a></li>
+            <li>
+            	<a href="list.html" class="tablink">家政服务</a>
+                <ul>
+                	<li><a href="#">居家养老&#12288&#12288</a></li>
+                    <li><a href="#">护理</a></li>
+                    <li><a href="#">家教</a></li>
+                    <li><a href="#">育婴师</a></li>
+                    <li><a href="#">月嫂</a></li>
+                    <li><a href="#">钟点工</a></li>
+                    <li><a href="#">保姆</a></li>
+                </ul>
+            </li>
+            <li><a href="list.html">宝洁服务</a>
+            	<ul>
+                	<li><a href="#">家庭保洁&#12288&#12288</a></li>
+                    <li><a href="#">企业保洁</a></li>
+                    <li><a href="#">防水补漏</a></li>
+                    <li><a href="#">外墙清洗</a></li>
+                </ul>
+            </li>
+            <li><a href="list.html">维修服务</a>
+            	<ul>
+                	<li><a href="#">家电维修&#12288&#12288</a></li>
+                    <li><a href="#">管道维修</a></li>
+                </ul>
+            </li>
+            <li><a href="list.html">搬家服务</a>
+            	<ul>
+                	<li><a href="#">公司乔迁&#12288&#12288</a></li>
+                    <li><a href="#">居家搬家</a></li>
+                    <li><a href="#">设备搬迁</a></li>
+                    <li><a href="#">长途搬运</a></li>
+                </ul>
+            </li>
+            <li><a href="list.html">跑腿服务</a>
+            	<ul>
+                	<li><a href="#">桶装水&#12288&#12288</a></li>
+                    <li><a href="#">煤气罐</a></li>
+                    <li><a href="#">米</a></li>
+                    <li><a href="#">蛋糕</a></li>
+                    <li><a href="#">送花</a></li>
+                    <li><a href="#">百货</a></li>
+                </ul>
+            </li>
+            <li><a href="list.html">企业推荐</a></li>
+            <li><a href="login.html">我要登记</a>
+            	<ul>
+                	<li><a href="information.html">我的需求&#12288&#12288</a></li>
+                    <li><a href="enroll.html">我要求职</a></li>
+                </ul>
+            </li>
+            <li><a href="list.html">培训就业</a>
+            	<ul>
+                	<li><a href="#">培训资讯&#12288&#12288</a></li>
+                    <li><a href="#">培训班</a></li>
+                    <li><a href="#">培训机构</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="big_middle">
+	<div class="wrapper">
+        <div id="focus">
+            <ul>
+                <li><a href="#" target="_blank"><img src="images/01.jpg" alt="标题标题标题标题标题" /></a></li>
+                <li><a href="#" target="_blank"><img src="images/02.jpg" alt="标题标题标题标题标题" /></a></li>
+                <li><a href="#" target="_blank"><img src="images/03.jpg" alt="标题标题标题标题标题" /></a></li>
+            </ul>
+        </div>
+	</div>
+    <div class="content_wrap">
+    	<div class="top_wrap">
+        	<div class="left_wrap">
+                <div class="login_wrap">
+                    <div class="login_tit"><h3>用户登录</h3></div>
+                    <div class="login">
+                        <table width="188" border="0">
+                          <tr>
+                            <td width="40">账号：</td>
+                            <td><input name="" type="text" class="input_text"/></td>
+                          </tr>
+                          <tr>
+                            <td>密码：</td>
+                            <td><input name="" type="text" class="input_text"/></td>
+                          </tr>
+                          <tr>
+                            <td colspan="2"><input type="button" class="buttom" value="注册"/><input type="button" class="buttom" value="登录"/></td>
+                          </tr>
+                        </table>
+                    </div>
+                </div>
+            	<div class="fb_img"><a href="enroll.html"><img src="images/psd4646.png"></a></div>
+            </div>
+
+            <div class="shzx_wrap">
+            	<div class="shzx_tit"><h3>生活资讯</h3><span><a href="list.html">更多>></a></span></div>
+                <div class="shzx">
+                	<div class="zx_top">
+                    	<img src="images/zx.jpg">
+                        <div class="zx_text">
+                       	  <a href="#"><h3>上班族应注意的10项饮食问题</h3></a>
+                       	  <p>长期不吃早餐不但会引起全天能量和营养素摄入不足，而且会造成肠内壁过度摩擦，损伤肠黏膜，导致消化系统疾病而引起营养不良，这样，全身的免疫力降低，机体的抵抗力就会大大下降。</p>
+                        </div>
+                    </div>
+                    <div class="zx_list">
+                    	<ul>
+                        	<li><a href="list_content.html">常吃香蕉有效防治12种常见病</a></li>
+                            <li><a href="#">常吃香蕉有效防治12种常见病</a></li>
+                            <li><a href="#">常吃香蕉有效防治12种常见病</a></li>
+                            <li><a href="#">常吃香蕉有效防治12种常见病</a></li>
+                            <li><a href="#">常吃香蕉有效防治12种常见病</a></li>
+                            <li><a href="#">常吃香蕉有效防治12种常见病</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="qytj_wrap">
+            	<div class="qytj_tit"><h3>企业推荐</h3><span><a href="#">更多>></a></span></div>
+                <div class="qytj">
+                	<ul>
+                    	<li><a href="qytj.html">潮州市湘桥区天川家政服务部</a></li>
+                        <li><a href="#">潮州市湘桥区天川家政服务部</a></li>
+                        <li><a href="#">潮州市湘桥区天川家政服务部</a></li>
+                        <li><a href="#">潮州市湘桥区天川家政服务部</a></li>
+                        <li><a href="#">潮州市湘桥区天川家政服务部</a></li>
+                        <li><a href="#">潮州市湘桥区天川家政服务部</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="middle_img"><img src="images/banner_1.jpg"></div>
+        
+        
+        <div class="left_list_wrap">
+        	<div class="left_list_tit"><h3>服务导航</h3></div>
+            <div class="left_list">
+            	<dl>
+                	<dt>家政服务</dt>
+                    <dd>
+                    	<a href="#">居家养老</a>
+                        <a>护理</a>
+                        <a>家教</a>
+                        <a>育婴师</a>
+                        <a>月嫂</a>
+                        <a>钟点工</a>
+                        <a>保姆</a>
+                    </dd>
+                    <dt>保洁服务</dt>
+                    <dd>
+                    	<a>家庭保洁</a>
+                        <a>企业保洁</a>
+                        <a>防水补漏</a>
+                        <a>外墙清洗</a>
+                    </dd>
+                    <dt>维修服务</dt>
+                    <dd>
+                    	<a>家电维修</a>
+                        <a>管道维修</a>
+                    </dd>
+                    <dt>搬家服务</dt>
+                    <dd>
+                    	<a>公司乔迁</a>
+                        <a>居家搬家</a>
+                        <a>设备搬迁</a>
+                        <a>长度搬运</a>
+                    </dd>
+                    <dt>跑腿服务</dt>
+                    <dd>
+                    	<a>桶装水</a>
+                        <a>煤气罐</a>
+                        <a>米</a>
+                        <a>蛋糕</a>
+                        <a>送花</a>
+                        <a>百货</a>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div class="right_info_wrap">
+        	<div class="right_info_tit">
+            	<h3 id="one1" class="hover1" onclick="window.open('');" onmouseover="setTab('one',1,2)">请家政</h3>
+                <h3 id="one2" class="" onclick="window.open('');" onmouseover="setTab('one',2,2)">做家政</h3>
+            </div>
+            <div class="right_info"id="con_one_1" >
+            	<!--<ul class="GrayLink">
+                	<li><span class="type">[月嫂母婴]</span><a href="gqxx.html">专业家政，保姆，月嫂，钟点工，开荒保洁——中山市万家利家政</a><span class="day">2-17</span></li>
+                    <li><span class="type">[月嫂母婴]</span><a href="#">专业家政，保姆，月嫂，钟点工，开荒保洁——中山市万家利家政</a><span class="day">2-17</span></li>
+                    <li><span class="type">[月嫂母婴]</span><a href="#">专业家政，保姆，月嫂，钟点工，开荒保洁——中山市万家利家政</a><span class="day">2-17</span></li>
+                    <li><span class="type">[月嫂母婴]</span><a href="#">专业家政，保姆，月嫂，钟点工，开荒保洁——中山市万家利家政</a><span class="day">2-17</span></li>
+                    <li><span class="type">[月嫂母婴]</span><a href="#">专业家政，保姆，月嫂，钟点工，开荒保洁——中山市万家利家政</a><span class="day">2-17</span></li>
+                    <li><span class="type">[月嫂母婴]</span><a href="#">专业家政，保姆，月嫂，钟点工，开荒保洁——中山市万家利家政</a><span class="day">2-17</span></li>
+                    <li><span class="type">[月嫂母婴]</span><a href="#">专业家政，保姆，月嫂，钟点工，开荒保洁——中山市万家利家政</a><span class="day">2-17</span></li>
+                    <li><span class="type">[月嫂母婴]</span><a href="#">专业家政，保姆，月嫂，钟点工，开荒保洁——中山市万家利家政</a><span class="day">2-17</span></li>
+                    <li><span class="type">[月嫂母婴]</span><a href="#">专业家政，保姆，月嫂，钟点工，开荒保洁——中山市万家利家政</a><span class="day">2-17</span></li>
+                    <li><span class="type">[月嫂母婴]</span><a href="#">专业家政，保姆，月嫂，钟点工，开荒保洁——中山市万家利家政</a><span class="day">2-17</span></li>
+                    <li><span class="type">[月嫂母婴]</span><a href="#">专业家政，保姆，月嫂，钟点工，开荒保洁——中山市万家利家政</a><span class="day">2-17</span></li>
+                </ul>-->
+                <table class="index_qjz">
+                      <tr>
+                        <th width="150">应聘职位</th>
+                        <th width="76">姓名</th>
+                        <th width="56">性别</th>
+                        <th width="150">从业时间</th>
+                        <th width="100">&nbsp;</th>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td><a href="#" class="jianli">简历详情</a></td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                      </tr>
+                    </table>
+            </div>
+			<div id="con_one_2" class="right_info" style="display: none;">
+            	<!--<ul class="GrayLink">
+                	<li><span class="type">[保姆服务]</span><a href="gqxx1.html">中山专业钟点工、保姆、月嫂、老人小孩护工、病人看护、公司煮饭</a><span class="day">2-17</span></li>
+                    <li><span class="type">[保姆服务]</span><a href="#">中山专业钟点工、保姆、月嫂、老人小孩护工、病人看护、公司煮饭</a><span class="day">2-17</span></li>
+                    <li><span class="type">[保姆服务]</span><a href="#">中山专业钟点工、保姆、月嫂、老人小孩护工、病人看护、公司煮饭</a><span class="day">2-17</span></li>
+                    <li><span class="type">[保姆服务]</span><a href="#">中山专业钟点工、保姆、月嫂、老人小孩护工、病人看护、公司煮饭</a><span class="day">2-17</span></li>
+                    <li><span class="type">[保姆服务]</span><a href="#">中山专业钟点工、保姆、月嫂、老人小孩护工、病人看护、公司煮饭</a><span class="day">2-17</span></li>
+                    <li><span class="type">[保姆服务]</span><a href="#">中山专业钟点工、保姆、月嫂、老人小孩护工、病人看护、公司煮饭</a><span class="day">2-17</span></li>
+                    <li><span class="type">[保姆服务]</span><a href="#">中山专业钟点工、保姆、月嫂、老人小孩护工、病人看护、公司煮饭</a><span class="day">2-17</span></li>
+                    <li><span class="type">[保姆服务]</span><a href="#">中山专业钟点工、保姆、月嫂、老人小孩护工、病人看护、公司煮饭</a><span class="day">2-17</span></li>
+                    <li><span class="type">[保姆服务]</span><a href="#">中山专业钟点工、保姆、月嫂、老人小孩护工、病人看护、公司煮饭</a><span class="day">2-17</span></li>
+                    <li><span class="type">[保姆服务]</span><a href="#">中山专业钟点工、保姆、月嫂、老人小孩护工、病人看护、公司煮饭</a><span class="day">2-17</span></li>
+                    <li><span class="type">[保姆服务]</span><a href="#">中山专业钟点工、保姆、月嫂、老人小孩护工、病人看护、公司煮饭</a><span class="day">2-17</span></li>
+            	</ul>-->
+                <table class="index_qjz">
+                      <tr>
+                        <th width="130">招聘单位</th>
+                        <th width="172">招聘职位</th>
+                        <th width="130">发布时间</th>
+                        <th width="100">&nbsp;</th>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td><a href="#" class="jianli">简历详情</a></td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                      </tr>
+                    </table>
+        	</div>
+        </div>
+
+        <div class="right_img_wrap">
+        	<div class="img_wrap"><img src="images/1771106_122015033242_2.jpg"></div>
+            <div class="img_wrap"><img src="images/1771106_122015033242_2.jpg"></div>
+            <div class="img_wrap img_wrap1"><img src="images/1771106_122015033242_2.jpg"></div>
+        </div>
+
+        <div class="friendship_wrap">
+        	<div class="friendship_tit"><h3>友情链接</h3></div>
+            <div class="friendship">
+            	<a href="#">保姆大本营</a>
+                <a href="#">保姆大本营</a>
+                <a href="#">保姆大本营</a>
+                <a href="#">保姆大本营</a>
+                <a href="#">保姆大本营</a>
+                <a href="#">保姆大本营</a>
+                <a href="#">保姆大本营</a>
+                <a href="#">保姆大本营</a>
+                <a href="#">保姆大本营</a>
+                <a href="#">保姆大本营</a>
+            </div>
+        </div>
+ 
+        <div class="ad_wrap">
+        	<a href="#"><img src="images/230-80.jpg"/></a>
+            <a href="#"><img src="images/230-80.jpg"/></a>
+            <a href="#"><img src="images/230-80.jpg"/></a>
+            <a href="#" class="over"><img src="images/230-80.jpg"/></a>
+        </div>
+ 
+ 
+    </div>
+</div>
+
+<div style="clear:both;"></div>
+<div class="big_bottom">
+	<div class="footer">
+    	<div class="about_wrap">
+        	<dl>
+            	<dt>收藏</dt>
+                <dd><a href="#">设为首页</a></dd>
+                <dd><a href="#">加入收藏</a></dd>
+            </dl>
+            <dl>
+            	<dt>培训就业</dt>
+                <dd><a href="#">培训资讯</a></dd>
+                <dd><a href="#">培训班</a></dd>
+                <dd><a href="#">培训机构</a></dd>
+            </dl>
+            <dl>
+            	<dt>用户反馈</dt>
+                <dd><a href="#">投诉反馈</a></dd>
+                <dd><a href="#">提供建议</a></dd>
+                <dd><a href="contact.html">联系我们</a></dd>
+            </dl>
+        </div>
+        <div class="copyright">
+        	<p class="top">版权所有:潮州市家政网 </br>
+            技术支持:潮州市盈龙信息科技有限公司</p>
+            <p class="bottom">
+            	Copyright&copy;2006-2012 5imoban.net All Rights Reserved. Powered by DedeCMS V57_GBK
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
