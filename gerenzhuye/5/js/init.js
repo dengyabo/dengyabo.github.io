@@ -400,10 +400,11 @@ function createGrid(transform, xx, yy, isHorizon) {
 
 		loop();
 
-		setTimeout(animation, 500);
+
 
 
 		$("#toggle").click(function (ev) {
+
 			if (!isAnimation) {
 
 				if (isOpen) {
@@ -417,5 +418,6 @@ function createGrid(transform, xx, yy, isHorizon) {
 
 				isOpen = !isOpen;
 			}
+			setTimeout(animation, 500)
 		});
 	})();

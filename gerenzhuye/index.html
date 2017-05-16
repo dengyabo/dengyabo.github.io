@@ -117,8 +117,12 @@
             z-index: 100;
         }
         .zuo{
-            float: left;width:50%;height:100%;margin-left: 0px;
+            float: left;width:50%;height:100%;margin-left: 0;
             /*display: none;*/
+        }
+        .you{
+            float: right;width:32%;height:100%;margin-right:0;
+            /*display:none;*/
         }
     </style>
     <script src="js/jquery-1.8.3.min.js"></script>
@@ -130,12 +134,12 @@
                 'navigation': true,
                 resize:true,
                 "navigationTooltips":(["my","About","PS","Html"]),
-//                afterload:function (index) {
-//                    if(index==2){
-//                        $(".zuo").show(1000);
-//                        $(".you").show(1000);
-//                    }
-//                }
+                afterload:function (index) {
+                    if(index==2){
+                        $(".zuo").show(1000);
+                        $(".you").show(1000);
+                    }
+                }
             });
             setInterval(function(){
                 $.fn.fullpage.moveSlideRight();
@@ -174,7 +178,7 @@
         </div>
 
     </div>
-    <div class="section" style="">
+    <div class="section">
         <div class="box" style="margin:0 auto;width:90%;height:auto;color: black;font-size: 0.05rem;overflow:hidden">
            <div style="font-size: 3rem;color: black;text-align: center;padding-top:40px;">ABOUT ME</div>
             <div class="zuo" >
@@ -182,8 +186,8 @@
                 <div class="xian" style="width:95%;height: 2px;background: black;"></div>
                 <p style="width: 80%;height: auto;font-size: 1.4rem;float: left;font-weight:100;">Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
-            <img src="img/about.png" class="touxiang" style="width: 200px;height: auto;float: left;margin-top: 50px">
-            <div class="you" style="float: right;width:32%;height:100%;margin-right:0">
+            <img src="img/about.png" class="touxiang" style="width: 200px;height: auto;float: left;margin-top: 50px;position: absolute;left:50%;">
+            <div class="you">
                 <h4 style="font-size: 2rem;width: 100%">CONTACT</h4>
                 <div class="xian" style="width: 98%;height: 2px;background: black;"></div>
                 <ul style="margin: 1rem;font-size: 1.8rem;margin-left: 30%">
@@ -289,8 +293,8 @@
             <div class="t-container">
 
                 <div class="t-content">
-                    <a href="../daziyouxi/img/index.html"><img class="t-img" src="img/dz.jpg" alt="" /></a>
-                    <div class="cover"></div>
+                   <img class="t-img" src="img/dz.jpg" alt="" />
+                    <a href="../daziyouxi/img/index.html"><div class="cover"></div></a>
                 </div>
 
                 <div class="t-content">
@@ -299,8 +303,8 @@
                 </div>
 
                 <div class="t-content">
-                    <a href="../jiazheng/index.html"><img class="t-img" src="img/jizheng.jpg" alt="" /></a>
-                    <div class="cover"></div>
+                    <img class="t-img" src="img/jizheng.jpg" alt="" />
+                    <a href="../jiazheng/index.html"><div class="cover"></div></a>
                 </div>
 
                 <div class="t-content">
@@ -309,13 +313,13 @@
                 </div>
 
                 <div class="t-content">
-                    <a href="../saolei/saolei.html"><img class="t-img" src="img/sl.jpg" alt="" /></a>
-                    <div class="cover"></div>
+                    <img class="t-img" src="img/sl.jpg" alt="" />
+                    <a href="../saolei/saolei.html"> <div class="cover"></div></a>
                 </div>
 
                 <div class="t-content">
-                    <a href="../yidong/index.html"><img class="t-img" src="img/yd.jpg" alt="" /></a>
-                    <div class="cover"></div>
+                    <img class="t-img" src="img/yd.jpg" alt="" />
+                    <a href="../yidong/index.html"><div class="cover"></div></a>
                 </div>
 
                 <div class="t-content">
@@ -329,8 +333,8 @@
                 </div>
 
                 <div class="t-content">
-                    <a href="../tianmao/index.html"><img class="t-img" src="img/天猫logo.jpg" alt="" /></a>
-                    <div class="cover"></div>
+                    <img class="t-img" src="img/天猫logo.jpg" alt="" />
+                    <a href="../tianmao/index.html"> <div class="cover"></div></a>
                 </div>
 
                 <div class="t-content">
@@ -339,8 +343,8 @@
                 </div>
 
                 <div class="t-content">
-                   <a href="../ueksy/index.html"><img class="t-img" src="img/优逸客logo.jpg" alt="" /></a>
-                    <div class="cover"></div>
+                   <img class="t-img" src="img/优逸客logo.jpg" alt="" />
+                    <a href="../ueksy/index.html"><div class="cover"></div></a>
                 </div>
 
                 <div class="t-content">
