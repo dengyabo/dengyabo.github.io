@@ -1,0 +1,326 @@
+.box{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	font-size: 16px;
+    font-family: "苹方","微软雅黑", "Helvetica";
+    color: #999;
+    background-color: #f5f6fa; 
+}
+.header{
+	width: 100%;
+    height: 0.89rem;
+    background-color: #007be3;
+    top: 0;
+    position: fixed;
+    z-index: 999;
+}
+.box1{
+	width: 2.27rem;
+    height: 0.68rem;
+    margin: 0 auto;
+    padding-top: 0.16rem;
+}
+.logo{
+	width: 0.7rem;
+    height: 0.67rem;
+    background: url(../img/logo.png) center center no-repeat;
+    float: left;
+    background-size: 0.7rem;
+}
+.header .box1 h3{
+	font-size: 0.37rem;
+    color: #fff;
+    line-height: 0.68rem;
+    float: left;
+    margin-left: 0.16rem;
+}
+.banner{
+	width: 100%;
+	overflow: hidden;
+	margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.ban{
+	width: 100%;
+	height: 4.21rem;
+	background-size: cover;
+	
+}
+img{
+	width: 100%;
+	height: 100%;
+}
+.box2{
+	width: 100%;
+	height: auto;
+	padding: 0.28rem 0rem 0;
+    overflow: hidden;
+}
+.box2 ul{
+	display: -webkit-flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;	
+}
+.box2 ul li{
+	margin: auto;
+	width: 1.4rem;
+    height: 1.8rem;
+    margin-bottom: 0.2rem;
+    text-align: center;
+    font-size: 0.25rem;
+}
+.box2 ul li span{
+	margin-top:0.1rem;
+	height: 0.5rem;
+	z-index: 100;
+}
+ .box2 ul li .a{
+ 	display: block;
+	width: 1.5rem;
+	height: 1.6rem;
+	border-radius:0.25rem;
+	background: white;   
+}
+.u1{
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/shouye6_02.png);
+	background-repeat: no-repeat;
+    background-size: contain;
+}
+.u2{
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/shouye6_03.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.u3{
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/shouye6_04.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.u4{
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/shouye6_09.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.e1{
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/shouye6_05.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.e2{
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/shouye6_06.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.e3{
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/shouye6_08.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.e4{
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/shouye6_07.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.fw{
+	width: 100%;
+    background-color: #fff;
+    overflow: hidden;
+}
+.title{
+	width: 100%;
+    height: 0.63rem;
+    margin-top:5px;
+    border-bottom: 1px solid #e8e8e8;
+    text-align: center;
+    line-height: 0.63rem;
+    font-size: 0.24rem;
+    color: #1378ba;
+}
+.xx{
+	width: 100%;
+	height: 2.2rem;
+	overflow: hidden;
+	position: relative;
+	padding: 0.38rem 0rem 0.48rem 0.16rem;
+	border: 1px solid #E8E8E8;
+}
+.zuo{
+	width: 49%;
+	border-right: 1px solid #E8E8E8;
+	height: 100%;
+	position: relative;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+.you{
+	width: 49%;
+	height: 100%;
+	position: relative;
+	right: 0;
+	top: 0;
+	margin: 0;
+	padding: 0;
+	float: right;
+}
+.zi{
+	width: 50%;
+	font-size: 0.2rem;	
+    height: 100%;
+    position: absolute;
+    left: 0;
+}
+.zi1{
+	color: black;
+}
+.tu{
+	width: 50%;
+	height: 100%;
+	position: absolute;
+	right: 5%;
+	top:0;
+}
+.mianfei{
+	width: 100%;
+	height: 1.38rem;
+}
+.mianfei ul{
+	width: 100%;
+	height: 100%;
+}
+.mianfei ul li{
+	width: 32.7%;
+	height: 1.38rem;
+	padding: 0.4rem 0 0.38rem 0.2rem;
+	border: 1px solid #E8E8E8;
+	position: relative;
+	float: left;
+}
+.tu1{
+	width: 30%;
+	height: 80%;
+	position: absolute;
+	top: 10%;
+	left: 5%;
+}
+.zz{
+	width: 100%;
+	font-size: 0.22rem;
+	color: black;
+	/*position: absolute;
+	right: 5%;
+	bottom:59%;*/
+}
+.zc{
+	width: 100%;
+	font-size: 0.2rem;
+	/*position: absolute;
+	right: 5%;
+	bottom: 20%;*/
+	color: #999999;
+}
+.gy{
+	width: 49%;
+	height: 50%;
+	position: absolute;
+	top: 25%;
+	right: 0;
+}
+.di{
+	width: 100%;
+	height: 1.2rem;
+	position: fixed;
+	bottom: 0;
+	z-index: 999;
+	overflow: 999;
+}
+.st{
+	width: 31%;
+	height: 0.7rem;
+	background: #E8E8E8;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.qq{
+	width: 33.5%;
+	height: 100%;
+    float: left;
+    margin-left:5%;
+    background-image: url(../img/qq.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.shi{
+	font-size: 0.3rem;
+	text-align: center;
+	line-height:0.8rem;
+}
+.boda{
+	width: 35.5%;
+	height: 1rem;
+	background: #ff6700;
+	border-radius: 0.2rem;
+	position: absolute;
+	bottom: 0;
+	left: 31%;
+}
+.qq1{
+	width: 30%;
+	height: 100%;
+    float: left;
+    margin-left:5%;
+    margin-top: 10%;
+    background-image: url(../img/dianhua_03.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.shi1{
+	font-size: 0.3rem;
+	color: white;
+	text-align: center;
+	line-height: 1.1rem;
+}
+.zaixian{
+	width: 33.5%;
+	height: 0.8rem;
+	background: #E8E8E8;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+.qq2{
+	width: 30%;
+	height: 100%;
+    float: left;
+    margin-left:5%;
+    margin-top: 10%;
+    background-image: url(../img/shouye6_14.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.shi2{
+	font-size: 0.3rem;
+	text-align: center;
+	line-height: 1.1rem;
+}
