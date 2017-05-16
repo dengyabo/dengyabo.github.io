@@ -23,7 +23,7 @@
         .t-container .t-content{position:absolute;top:0;left:0;width:400px;height:225px;}
         .t-container .t-content img{position:absolute;width:400px;height:225px;}
         .t-container .t-content .cover{position:absolute;top:0;left:0;background-color:rgba(0, 0, 0, 0.75);width:400px;height:225px;}
-        .container{position:absolute;-moz-transform:translateX(-50%);-ms-transform:translateX(-50%);-webkit-transform:translateX(-50%);transform:translateX(-50%);left:45%;bottom:50px;}
+        .container{position:absolute;-moz-transform:translateX(-50%);-ms-transform:translateX(-50%);-webkit-transform:translateX(-50%);transform:translateX(-50%);left:90%;bottom:50px;}
         .container .btn{z-index:9999;}
         #header h1{
             width: 10%;
@@ -116,6 +116,10 @@
             top:40%;
             z-index: 100;
         }
+        .zuo{
+            float: left;width:50%;height:100%;margin-left: 0px;
+            /*display: none;*/
+        }
     </style>
     <script src="js/jquery-1.8.3.min.js"></script>
     <script src="js/jquery.fullPage.js"></script>
@@ -125,7 +129,13 @@
                 continuousVertical: true,
                 'navigation': true,
                 resize:true,
-                "navigationTooltips":(["my","About","PS","Html"])
+                "navigationTooltips":(["my","About","PS","Html"]),
+//                afterload:function (index) {
+//                    if(index==2){
+//                        $(".zuo").show(1000);
+//                        $(".you").show(1000);
+//                    }
+//                }
             });
             setInterval(function(){
                 $.fn.fullpage.moveSlideRight();
@@ -164,32 +174,33 @@
         </div>
 
     </div>
-    <div class="section" style="background:#0a628f;">
-        <div class="box" style="margin:0 auto;width:90%;height:auto;color: black;font-size: 0.05rem;">
+    <div class="section" style="">
+        <div class="box" style="margin:0 auto;width:90%;height:auto;color: black;font-size: 0.05rem;overflow:hidden">
            <div style="font-size: 3rem;color: black;text-align: center;padding-top:40px;">ABOUT ME</div>
-            <div class="zuo" style="float: left;width:50%;height:100%;">
+            <div class="zuo" >
                 <h4 style="font-size: 2rem;width: 100%">MY STORY</h4>
                 <div class="xian" style="width:95%;height: 2px;background: black;"></div>
                 <p style="width: 80%;height: auto;font-size: 1.4rem;float: left;font-weight:100;">Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
-            <div class="you" style="float: right;width:50%;height:100%">
+            <img src="img/about.png" class="touxiang" style="width: 200px;height: auto;float: left;margin-top: 50px">
+            <div class="you" style="float: right;width:32%;height:100%;margin-right:0">
                 <h4 style="font-size: 2rem;width: 100%">CONTACT</h4>
                 <div class="xian" style="width: 98%;height: 2px;background: black;"></div>
-                <ul style="margin: 1rem;font-size: 1.8rem;">
+                <ul style="margin: 1rem;font-size: 1.8rem;margin-left: 30%">
                     <li style="margin-top: 0.7rem">
-                        Birthday  :<span style="font-size: 1rem;color: #ffffdd;"> 04/27/1996 </span>
+                        Birthday  :<span style="font-size: 1rem;color: #0e90d2;"> 04/27/1996 </span>
                     </li>
                     <li style="margin-top: 0.7rem">
-                        Phone  :<span style="font-size: 1rem;color: #ffffdd;"> 157-3516-5921 </span>
+                        Phone  :<span style="font-size: 1rem;color: #0e90d2;"> 157-3516-5921 </span>
                     </li>
                     <li style="margin-top: 0.7rem">
-                        Email  :<span style="font-size: 1rem;color: #ffffdd;"> 848216778@qq.com </span>
+                        Email  :<span style="font-size: 1rem;color: #0e90d2;"> 848216778@qq.com </span>
                     </li>
                     <li style="margin-top: 0.7rem">
-                        QQ  :<span style="font-size: 1rem;color: #ffffdd;"> 848216778 </span>
+                        QQ  :<span style="font-size: 1rem;color: #0e90d2;"> 848216778 </span>
                     </li>
                     <li style="margin-top: 0.7rem">
-                        Address  :<span style="font-size: 1rem;color: #ffffdd;"> 山西省运城市 </span>
+                        Address  :<span style="font-size: 1rem;color: #0e90d2;"> 山西省运城市 </span>
                     </li>
                 </ul> 
             </div>
