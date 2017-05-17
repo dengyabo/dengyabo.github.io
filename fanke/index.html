@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="utf-8">
+        <title>凡客</title>
+        <link rel="stylesheet" type="text/css" href="css/base.css">
+        <link rel="stylesheet" type="text/css" href="css/凡客.css">
+		<script>
+			window.onload=function () {
+				var lis=document.querySelectorAll(".lists>li")
+				var sec=document.querySelectorAll(".seclists")
+				var arr=[];   //保存每个ul的高度
+				//var arr=Array.form(sec).map(v=>v.querySelectorAll("li").lenth*30-24);
+				Array.from(sec).forEach(function (ul,index) {   //ul 每个seclists
+					let lis=ul.querySelectorAll("li");
+					let height=lis.length*35-25;
+					arr.push(height);
+				});
+				Array.from(lis).forEach(function (li,index) {
+
+					li.onmouseover=function () {
+						sec[index].style.height=arr[index]+"px"
+
+					}
+					li.onmouseout=function () {
+						sec[index].style.height=0
+					}
+				})
+
+			}
+		</script>
+		<style>
+
+			.neikuang2 .btnbox:nth-child(1){
+				opacity: 1;
+				z-index: 1;
+			}
+            .index{
+				width: 90px;
+				height: 50px;
+				font-size: 21px;
+				text-align: center;
+				line-height: 50px;
+				color: #333333;
+				float: left;
+			}
+			span{
+				font-size: 21px;
+				float: right;
+			}
+			a{
+				text-decoration: none;
+				color: #333333;
+			}
+			.lists{
+				width: 810px;
+				height: 50px;
+				float: left;
+				font-size: 21px;
+				text-align: center;
+				color: #333333;
+			}
+			.lists li{
+				width: 90px;
+				height: 50px;
+				float: left;
+				position: relative;
+				line-height: 50px;
+			}
+			ul{
+				padding:0;
+				margin: 0;
+				list-style: none
+			}
+			.lists li .seclists{
+				width: 90px;
+				height:0;
+				position: absolute;
+				left:0;
+				top:50px;
+				background: white;
+				overflow: hidden;
+				z-index: 999;
+				transition: all 1s;
+			}
+			.seclists .top{
+				height: 5px;
+				width: 90px;
+				border-top: 5px solid red;
+				border-left: 0;
+				border-right: 0;
+			}
+			.seclists li:not(top){
+				width: 88px;
+				height: 35px;
+				border-left: 1px solid #ccc;
+				border-right: 1px solid #ccc;
+			}
+			.ew{
+				width: 200px;
+				height:200px;
+				position: absolute;
+				bottom: -200px;
+				left: -148px;
+				z-index:50;
+				display: none;
+			}
+			.weixin:hover .ew{
+				display: block;
+			}
+		</style>
+    </head>
+    <body>
+     <!-- 头部开始 -->
+     <div class="herder">
+     	<div class="neikuan">
+     		<div class="herder-right">
+     			<div class="nihao">您好，欢迎光临凡客诚品!</div>
+     			<a href=""><div class="denglu">登录</div></a>
+     			<a href="">
+                     <div class="shugang">|</div> </a>
+     			<a href=""><div class="zhuce">注册</div></a>
+     			<a href=""><div class="dingdan">我的订单</div></a>
+     			<!-- <a href=""><img src="img/notice.png" class="shengyin"></a> -->
+     			<a href=""><div class="shengyin"></div></a>
+
+                    <a href=""><div class="gonggao">网站公告</div></a>
+     			<a href=""><div class="weixin">
+					<div class="ew"> <img src="img/11111.jpg"> </div>
+				</div></a>
+     			<a href=""><div class="weibo"></div></a>
+     	         
+     	      </div>
+          </div>
+     </div>
+     <!-- 头部结束 -->
+     <!-- 搜索栏开始 -->
+     <div class="sousuo">
+     	<div class="neikuang">
+     		<div class="weizhi">
+               <input type="text" placeholder="搜衬衫，体验与众不同" class="ssl">
+     			<!-- <div class="ssl"></div> 搜索栏 -->
+     			<a href=""><div class="sousuo1"><img src="img/搜索.png" class="img"></div></a>
+     			<a href=""><div class="sousuo2">
+                    <span class="gwc">购物车(0)</span>            
+                    </div></a>
+     			<div class="remen">热门搜索</div>
+     			<div class="remen">免烫衬衫</div>
+     			<div class="remen">羽绒服</div>
+     			<div class="remen">羊毛大衣</div>
+     			<div class="remen">智能温控</div>
+     			<div class="remen">户外鞋</div>
+     			<div class="remen">休闲裤</div>
+     			<div class="remen">跑步T恤</div>
+     				
+     			
+     		</div>
+     		
+     	</div>  
+     </div>
+     <!-- 搜索栏结束 -->
+     <!-- 导航栏开始 -->
+     <div class="daohang">
+     	<div class="neikuang1">
+     		<div class="logo"><img src="img/logo18546.png"></div>
+			<div class="index">
+				<a href="">
+					首页  <span>|</span>
+				</a>
+			</div>
+			<ul class="lists">
+				<li>
+					<a href="">T恤<span>|</span> </a>
+					<ul class="seclists">
+						<li class="top"></li>
+						<li><a href="">薛继业</a></li>
+						<li><a href="">字</a></li>
+						<li><a href="">好小猪</a></li>
+						<li><a href="">义系列</a></li>
+						<li><a href="">药系列</a></li>
+						<li><a href="">简鱼</a></li>
+						<li><a href="">十二生肖</a></li>
+						<li><a href="">张爱玲</a></li>
+						<li><a href="">穆旦</a></li>
+						<li><a href="">马尔克斯</a></li>
+						<li><a href="">艺术家</a></li>
+					</ul>
+				</li>
+				<li><a href="">衬衫<span>|</span></a>
+					<ul class="seclists">
+						<li class="top"></li>
+						<li><a href="">免烫</a></li>
+						<li><a href="">高支</a></li>
+						<li><a href="">休闲</a></li>
+						<li><a href="">短袖衬衫</a></li>
+						<li><a href="">法兰绒</a></li>
+						<li><a href="">牛津纺</a></li>
+						<li><a href="">青年布</a></li>
+						<li><a href="">牛仔</a></li>
+						<li><a href="">麻</a></li>
+						<li><a href="">水洗棉</a></li>
+						<li><a href="">泡泡衫</a></li>
+					</ul>
+				</li>
+				<li><a href="">黑标<span>|</span></a>
+					<ul class="seclists">
+						<li class="top"></li>
+						<li><a href="">卫衣</a></li>
+						<li><a href="">外套</a></li>
+						<li><a href="">衬衫</a></li>
+						<li><a href="">裤装</a></li>
+						<li><a href="">T恤</a></li>
+					</ul>
+				</li>
+				<li><a href="">外套<span>|</span></a>
+					<ul class="seclists">
+						<li class="top"></li>
+						<li><a href="">羽绒服</a></li>
+						<li><a href="">大衣</a></li>
+						<li><a href="">西服</a></li>
+						<li><a href="">夹克</a></li>
+						<li><a href="">nautilus</a></li>
+					</ul>
+				</li>
+				<li><a href="">针织衫<span>|</span></a>
+					<ul class="seclists">
+						<li class="top"></li>
+						<li><a href="">空调衫</a></li>
+						<li><a href="">棉线衫</a></li>
+						<li><a href="">羊毛衫</a></li>
+						<li><a href="">羊绒衫</a></li>
+					</ul>
+				</li>
+				<li><a href="">水柔棉<span>|</span></a>
+					<ul class="seclists">
+						<li class="top"></li>
+						<li><a href="">拉链开衫</a></li>
+						<li><a href="">长袖v领</a></li>
+						<li><a href="">长袖圆领</a></li>
+						<li><a href="">短袖</a></li>
+					</ul>
+				</li>
+				<li><a href="">裤装<span>|</span></a>
+					<ul class="seclists">
+						<li class="top"></li>
+						<li><a href="">商务</a></li>
+						<li><a href="">休闲</a></li>
+						<li><a href="">牛仔裤</a></li>
+						<li><a href="">麻裤子</a></li>
+						<li><a href="">针织裤</a></li>
+					</ul>
+				</li>
+				<li><a href="">鞋<span>|</span></a>
+					<ul class="seclists">
+						<li class="top"></li>
+						<li><a href="">复古跑鞋</a></li>
+						<li><a href="">户外鞋</a></li>
+						<li><a href="">帆布鞋</a></li>
+						<li><a href="">皮鞋</a></li>
+						<li><a href="">休闲鞋</a></li>
+					</ul>
+				</li>
+				<li><a href="">家具配饰</a>
+					<ul class="seclists">
+						<li class="top"></li>
+						<li><a href="">袜品</a></li>
+						<li><a href="">床品套件</a></li>
+						<li><a href="">被子</a></li>
+						<li><a href="">枕头</a></li>
+						<li><a href="">背心</a></li>
+						<li><a href="">麻裤子</a></li>
+						<li><a href="">珊瑚绒睡袍</a></li>
+						<li><a href="">家居毯</a></li>
+					</ul>
+				</li>
+			</ul>
+     		
+     	</div>
+     	
+     </div><!-- 导航栏结束 -->
+     <!-- banner开始 -->
+     <div class="banner">
+     	<div class="neikuang2">
+     		    <div class="btnbox"><img src="img/ys535.jpg"></div>
+				<div class="btnbox"><img src="img/banner11.jpg"></div>
+				<div class="btnbox"><img src="img/banner22.jpg"></div>
+				<div class="btnbox"><img src="img/banner33.jpg"></div>
+				<div class="btnbox"><img src="img/banner44.jpg"></div>
+				<div class="btnbox"><img src="img/banner55.jpg"></div>
+			<div class="zjt"><img src="img/focus_lr0918_02.png">
+
+               </div>
+			<div class="yjt"><img src="img/focus_lr0918_04.png">
+
+               </div>
+               <div class="fd">
+               <div class="dian"></div>
+               <div class="dian dian1"></div>
+               <div class="dian"></div>
+               <div class="dian"></div>
+               <div class="dian"></div>
+               <div class="dian"></div>
+               </div>
+
+
+               
+     		
+     	</div>
+     </div>
+     <!-- banner结束 -->
+     <div class="chun">
+     	<div class="neikuang3">
+     		<div class="chunji">春季新品预售</div>
+     	</div>
+     </div>
+     <div class="tu1">
+     	<div class="neikuang4">
+     		<div class="tu12"><img src="img/cjys_04.jpg" class="img"></div>
+     		<div class="tu12"><img src="img/cjys_05.jpg" class="img"></div>
+     		<div class="tu12"><img src="img/cjys_06.jpg" class="img"></div>
+     		<div class="tu12"><img src="img/cjys_07.jpg" class="img"></div>
+     		<div class="tu12"><img src="img/cjys_08.jpg" class="img"></div>
+     		<div class="tu12"><img src="img/cjys_44.jpg" class="img"></div>
+               <div class="tu12"><img src="img/cjys_26.jpg" class="img"></div>
+               <div class="tu12"><img src="img/cjys_27.jpg" class="img"></div>
+     		<div class="tu12"><img src="img/cjys_25.jpg" class="img"></div>
+               <div class="tu12"><img src="img/cjys_13.jpg" class="img"></div>
+               <div class="tu12"><img src="img/cjys_14.jpg" class="img"></div>
+               <div class="tu12"><img src="img/cjys_15.jpg" class="img"></div>
+               <div class="tu12"><img src="img/cjys_19.jpg" class="img"></div>
+               <div class="tu12"><img src="img/cjys_20.jpg" class="img"></div>
+               <div class="tu12"><img src="img/cjys_21.jpg" class="img"></div>
+               <div class="tu12"><img src="img/cjys_31.jpg" class="img"></div>
+               <div class="tu12"><img src="img/cjys_33.jpg" class="img"></div>
+               <div class="tu12"><img src="img/cjys_34.jpg" class="img"></div>
+     	</div>
+
+     </div>
+     <div class="chun">
+          <div class="neikuang3">
+               <div class="chunji">韩国购 全场8折</div>
+          </div>   </div>
+     <div class="hanguo">
+     	<div class="neikuang5">
+     		<div class="zuozuo">
+                    <div class="tu22"><img src="img/01.jpg"></div>
+                    <div class="sp1">帽衫 COCO DOG</div>
+                    <div class="sp2">319.2元</div>
+
+               </div>
+     		<div class="zhong111">
+     			<div class="zhongshang"><img src="img/003.jpg">
+                    <div class="sp1">马甲 NOMONTIC HEART</div>
+                    <div class="sp2">215.2元</div></div>
+     			<div class="zhongshang"><img src="img/002.jpg">
+                    <div class="sp1">帽衫 APOLLO DOG 2</div>
+                    <div class="sp2">319.2元</div></div>
+     			
+     		</div>
+     		<div class="qwe"><div class="you123"><img src="img/04.jpg" class="t04"></div>
+               <div class="sp1">衬衫 NOMONTIC HEART</div>
+                    <div class="sp2">319.2元</div></div>
+     	</div>
+          <div class="chun">
+             </div></div>
+             <div class="chun"><div class="neikuang3">
+               <div class="chunji">超值精选区</div>
+          </div></div>
+<div class="hanguo">
+      
+     <div class="neikuang5">
+          <div class="zuozuo">
+                    <div class="tu22"><img src="img/1.jpg"></div>
+                    <div class="sp1">凡客羽绒服 轻暖95绒 连帽 男款</div>
+                    <div class="sp2">368元</div>
+
+               </div>
+               <div class="zhong111">
+                    <div class="zhongshang"><img src="img/2.jpg">
+                    <div class="sp1">凡客衬衫 弹力修身 小方领</div>
+                    <div class="sp2">218元</div></div>
+                    <div class="zhongshang"><img src="img/3.jpg">
+                    <div class="sp1">凡客衬衫 法兰绒 男款</div>
+                    <div class="sp2">158元</div></div>
+                    
+               </div>
+               <div class="qwe"><div class="you123"><img src="img/4.jpg" class="t04"></div>
+               <div class="sp1">凡客羽绒服 轻暖95绒 立领 女款</div>
+                    <div class="sp2">368元</div></div>
+          </div>
+
+     </div>
+    
+     <div class="erwei">
+     <div class="neikuang6">
+     	<div class="xiazuo">
+     		<div class="kefu"><img src="img/onlinecustomer.png" class="img"></div>
+     		<div class="zitibeijing">
+     		<div class="fuxia">7*9小时在线客服</div></div>
+     	</div>
+     	<div class="xiazuo1">
+     		<div class="kefu"><img src="img/seven.png" class="img"></div>
+     		<div class="zitibeijing1">
+     		<div class="fuxia1">7天内退换货</div>
+     		<div class="fuxia2">购物满199元免运费</div></div>
+     	</div>
+
+     	<div class="xiazuo1">
+     		<div class="kefu11"><img src="img/2014_8_29_16_39_33_7709.jpg" class="img"></div>
+     		<div class="zitibeijing2">
+     		<div class="fuxia1">扫描下载凡客客户端</div>
+     	</div>
+     	</div>
+     	<div class="xiakuang">
+     		<div class="gy">关于凡客</div>
+     		<div class="gang123">|</div>
+     		<div class="gy">新手指南</div>
+     		<div class="gang123">|</div>
+     		<div class="gy">配送范围及时间</div>
+     		<div class="gang123">|</div>
+     		<div class="gy">支付方式</div>
+     		<div class="gang123">|</div>
+     		<div class="gy">售后服务</div>
+     		<div class="gang123">|</div>
+     		<div class="gy">帮助中心</div>
+     	</div>
+     	
+     </div> </div>
+     <div class="dizhi">
+     	<div class="neikuang7">
+     		<div class="dizhi1">Copyright 2007 - 2016 vancl.com All Rights Reserved 京ICP证100557号 京公网安备11011502002400号 出版物经营许可证新出发京批字第直110138号</div>
+     		<div class="dizhi1">凡客诚品（北京）科技有限公司</div>
+     	</div>
+     </div>
+     <div class="hezuo">
+     	<div class="neiguang8">
+     		<div class="tutu">
+     			<img src="img/spritesbgtop_02.png">
+     		</div>
+     		<div class="tutu1">
+     			<img src="img/spritesbgtop_05.png">
+     		</div>
+     		<div class="tutu2">
+     			<img src="img/spritesbgtop_07.png">
+     		</div>
+     		<div class="tutu1">
+     			<img src="img/spritesbgtop_08.png">
+     		</div>
+     		<div class="tutu3">
+     			<img src="img/spritesbgtop_09.png">
+     		</div>
+     		<div class="tutu1">
+     			<img src="img/kexin_brand_for_others.png" class="ztc">
+     		</div>
+     	</div>
+     </div>
+     <a href="" ><div class="hddb"><img src="img/baywindow.png"></div></a>
+
+
+    </body>
+	<script>
+		var lb=document.querySelectorAll(".dian");
+		var tu=document.querySelectorAll(".btnbox");
+		var con=document.querySelector(".neikuang2");
+		var prev=document.querySelector(".zjt");
+		var next=document.querySelector(".yjt");
+
+		//	var obj=lb[0]
+		Array.from(lb).forEach(function (ele,index) {
+			ele.onmouseover=function () {
+				num=index
+				for(var i=0;i<lb.length;i++){
+					lb[i].style.background="#A2A2A2"
+					tu[i].style.zIndex=1
+					tu[i].style.opacity=0
+				}
+				this.style.background = "#F1F1F1"
+				tu[index].style.zIndex=2
+				tu[index].style.opacity=1
+			}
+		})
+		var num=0;
+		var r=setInterval(fn,3000)
+		function fn() {
+			num++;
+			if(num==lb.length){
+				num=0;
+			}
+			if(num==-1){
+				num=lb.length-1;
+			}
+			for(var i=0;i<lb.length;i++) {
+				lb[i].style.background = "#A2A2A2"
+				tu[i].style.zIndex=1
+				tu[i].style.opacity=0
+
+			}
+			lb[num].style.background = "#F1F1F1"
+			tu[num].style.zIndex=2
+			tu[num].style.opacity=1
+		}
+		con.onmouseover=function(){
+			clearInterval(r);
+		}
+		con.onmouseout=function () {
+			r=setInterval(fn,3000)
+		}
+		next.onclick=function () {
+			fn();
+		};
+		prev.onclick=function () {
+			num-=2;
+			fn();
+		};
+	</script>
+</html>
