@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绘图板</title>
+    <style>
+        html,body{
+            width:100%;
+            height:100%;
+            position: relative;
+        }
+        canvas{
+            background: #cc7f32;
+            display: block;
+            /*float: left;*/
+            position: absolute;
+            top:0;
+            bottom:0;
+            left:0;
+            right:0;
+            margin:auto;
+        }
+        .control{
+            width:300px;
+            height:100%;
+            background: #060838;
+            float: left;
+        }
+        .control section{
+            width:100%;
+            height:30px;
+            margin-top: 30px;
+            /*margin-bottom: 10px;*/
+        }
+        .control section lable{
+            display: block;
+            float: left;
+            width:40%;
+            height:30px;
+            text-align: center;
+            line-height: 30px;
+            font-size: 20px;
+            color: #fff;
+        }
+        .control section select{
+            width:50%;
+            height:30px;
+        }
+        input{
+            width:50%;
+            height:30px;
+            margin:0;
+            /*border:0;*/
+        }
+        #redo{
+            display: block;
+            width:230px;
+            height:30px;
+            font-size: 20px;
+            background: #0c901f;
+            border-radius: 5px;
+            margin:15px auto;
+            color: #fff;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            line-height: 30px;
+        }
+        #save{
+            display: block;
+            width:230px;
+            height:30px;
+            font-size: 20px;
+            background: #0c901f;
+            border-radius: 5px;
+            margin:15px auto;
+            color: #fff;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            line-height: 30px;
+        }
+        #clear{
+            display: block;
+            width:230px;
+            height:30px;
+            font-size: 20px;
+            background: #0c901f;
+            border-radius: 5px;
+            margin:15px auto;
+            color: #fff;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            line-height: 30px;
+        }
+        .lol{
+            width:100%;
+            height:60%;
+        }
+        .lol1{
+            width:100%;
+            height:40%;
+        }
+    </style>
+</head>
+<body>
+<div class="control">
+    <div class="lol">
+        <section>
+            <lable for="shape">选择形状</lable>
+            <select id="shape">
+                <option value="rect">矩形</option>
+                <option value="line">直线</option>
+                <option value="circlein">内切圆</option>
+                <option value="circleout">外接圆</option>
+                <option value="circlecenter">中心圆</option>
+                <option value="poly">多边形</option>
+                <option value="pen">铅笔</option>
+                <option value="eraser">橡皮</option>
+            </select>
+        </section>
+        <section>
+            <lable for="color">选择颜色</lable>
+            <input type="color" id="color">
+        </section>
+        <section>
+            <lable for="width">选择线宽</lable>
+            <input type="number" id="width" max="20" min="2" value="2" step="2">
+        </section>
+        <section>
+            <lable for="style">选择样式</lable>
+            <select id="style">
+                <option value="stroke">描边</option>
+                <option value="fill">填充</option>
+            </select>
+        </section>
+        <section>
+            <lable for="side">选择边数</lable>
+            <input type="number" id="side" value="3" min="3" max="12">
+        </section>
+    </div>
+    <div class="lol1">
+        <input type="button" value="撤销" id="redo">
+        <input type="button" value="保存" id="save">
+        <input type="button" value="清空" id="clear">
+    </div>
+</div>
+<canvas height="800" width="800"></canvas>
+</body>
+<script src="main.js"></script>
+<script>
+    var canvas=document.querySelector("canvas");
+    var cobj=canvas.getContext("2d");
+    var shape=document.querySelector("#shape");
+    var option=document.querySelectorAll("option");
+    var color=document.querySelector("#color");
+    var width=document.querySelector("#width");
+    var styles=document.querySelector("#style");
+    var side=document.querySelector("#side");
+    var data=[];
+    var s="rect";
+    shape.onchange=function () {
+        s=this.value;
+    };
+    var c="#000";
+    color.onchange=function () {
+        c=this.value;
+    };
+    var w="2";
+    width.onchange=function () {
+        w=this.value;
+    };
+    var st="stroke";
+    styles.onchange=function () {
+        st=this.value;
+    };
+    var si=3;
+    side.onchange=function () {
+      si=this.value;
+    };
+    canvas.onmousedown=function (e) {
+        var ox=e.offsetX;
+        var oy=e.offsetY;
+        var draw=new Draw(cobj,{color:c,width:w,style:st});
+        if(s=="pen"){
+            cobj.beginPath();
+            cobj.moveTo(ox,oy)
+        }
+        canvas.onmousemove=function (e) {
+            var mx=e.offsetX;
+            var my=e.offsetY;
+            if(s!="eraser"){
+                cobj.clearRect(0,0,800,800);
+                if(data.length>0){
+                    cobj.putImageData(data[data.length-1],0,0);
+                }
+            }
+            draw[s](ox,oy,mx,my,si);
+        };
+        canvas.onmouseup=function () {
+            data.push(cobj.getImageData(0,0,800,800));
+            canvas.onmousemove=null;
+            canvas.onmouseup=null;
+        }
+    };
+    var redo=document.querySelector("#redo");
+    var save=document.querySelector("#save");
+    var clear=document.querySelector("#clear");
+    redo.onclick=function () {
+        if(data.length==0){
+            alert("已经没有了");
+            return;
+        }
+        cobj.clearRect(0,0,800,800);
+        data.pop();
+        if(data.length==0){
+            return;
+        }
+        cobj.putImageData(data[data.length-1],0,0);
+    };
+    save.onclick=function () {
+        var aa=canvas.toDataURL();
+        location.href=aa;
+    };
+    clear.onclick=function () {
+        cobj.clearRect(0,0,800,800);
+        data=[];
+    }
+</script>
+<script>
+    window.onload=function () {
+        color.value="#000";
+    }
+</script>
+</html>
